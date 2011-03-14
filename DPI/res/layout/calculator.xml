@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:stretchColumns="1">
+
+   <TableRow>
+       <TextView
+           android:text="Screen Width (pixel)"
+           android:textStyle="bold"
+           android:gravity="left"
+           android:padding="3dip" />
+
+       <EditText android:id="@+id/screen_width"
+           android:inputType="number"
+           android:hint="Integer only"
+           android:padding="3dip" />
+   </TableRow>
+
+   <TableRow>
+       <TextView
+           android:text="Screen Height (pixel)"
+           android:textStyle="bold"
+           android:gravity="left"
+           android:padding="3dip" />
+
+       <EditText android:id="@+id/screen_height"
+           android:inputType="number"
+           android:hint="Integer only"
+           android:padding="3dip" />
+   </TableRow>
+   
+   <TableRow>
+       <TextView
+           android:text="Screen Size (inch)"
+           android:textStyle="bold"
+           android:gravity="left"
+           android:padding="3dip" />
+
+       <EditText android:id="@+id/screen_size"
+           android:inputType="number"
+           android:hint="such as 3.7 or 5"
+           android:padding="3dip" />
+   </TableRow>
+
+   <TableRow
+       android:gravity="right">
+
+       <Button android:id="@+id/btn_clear"
+           android:text="Clear" />
+
+       <Button android:id="@+id/btn_calculate"
+           android:text="Calculate" />
+   </TableRow>
+   
+   <View
+        android:layout_height="2dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
+        android:background="#FF909090" />
+   
+   <TableRow>
+       <TextView
+           android:text="DPI"
+           android:textStyle="bold"
+           android:gravity="right"
+           android:padding="3dip" />
+
+       <EditText android:id="@+id/dpi_result"
+           android:editable="false"
+           android:hint="Result"
+           android:padding="3dip" />
+   </TableRow>
+</TableLayout>
