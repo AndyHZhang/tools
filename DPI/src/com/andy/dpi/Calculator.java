@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
 public class Calculator extends Activity {
 
     private EditText mScreenWidth;
@@ -21,6 +24,10 @@ public class Calculator extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculator);
+        
+        // Look up the AdView as a resource and load a request.
+	    AdView adView = (AdView)this.findViewById(R.id.adView);
+	    adView.loadAd(new AdRequest());
 
         initUI();
     }

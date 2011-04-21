@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:ads="http://schemas.android.com/apk/res/com.andy.dpi"
+              xmlns:ads="http://schemas.android.com/apk/res/com.andy.tax.calculator"
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
-              
+
   <com.google.ads.AdView android:id="@+id/adView"
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
-                         ads:adUnitId="a14dafbf6f442fc"
+                         ads:adUnitId="a14daf93df6297a"
                          ads:adSize="BANNER"/>
                          
   <TableLayout
@@ -18,25 +18,12 @@
 
    <TableRow>
        <TextView
-           android:text="Screen Width (pixel)"
+           android:text="收入金额"
            android:textStyle="bold"
            android:gravity="left"
            android:padding="3dip" />
 
-       <EditText android:id="@+id/screen_width"
-           android:inputType="number"
-           android:hint="Integer only"
-           android:padding="3dip" />
-   </TableRow>
-
-   <TableRow>
-       <TextView
-           android:text="Screen Height (pixel)"
-           android:textStyle="bold"
-           android:gravity="left"
-           android:padding="3dip" />
-
-       <EditText android:id="@+id/screen_height"
+       <EditText android:id="@+id/total_income"
            android:inputType="number"
            android:hint="Integer only"
            android:padding="3dip" />
@@ -44,25 +31,25 @@
    
    <TableRow>
        <TextView
-           android:text="Screen Size (inch)"
+           android:text="各项社会保险费 "
            android:textStyle="bold"
            android:gravity="left"
            android:padding="3dip" />
 
-       <EditText android:id="@+id/screen_size"
+       <EditText android:id="@+id/other_tax"
            android:inputType="number"
-           android:hint="such as 3.7 or 5"
+           android:hint="Integer only"
            android:padding="3dip" />
    </TableRow>
-
+   
    <TableRow
        android:gravity="right">
 
        <Button android:id="@+id/btn_clear"
-           android:text="Clear" />
+           android:text="清空" />
 
        <Button android:id="@+id/btn_calculate"
-           android:text="Calculate" />
+           android:text="计算" />
    </TableRow>
    
    <View
@@ -73,16 +60,29 @@
    
    <TableRow>
        <TextView
-           android:text="DPI"
+           android:text="新税法需纳税"
            android:textStyle="bold"
            android:gravity="right"
            android:padding="3dip" />
 
-       <EditText android:id="@+id/dpi_result"
+       <EditText android:id="@+id/new_tax"
            android:editable="false"
-           android:hint="Result"
+           android:hint="0"
            android:padding="3dip" />
    </TableRow>
-  </TableLayout>
+   
+   <TableRow>
+       <TextView
+           android:text="原税法需纳税"
+           android:textStyle="bold"
+           android:gravity="right"
+           android:padding="3dip" />
+
+       <EditText android:id="@+id/old_tax"
+           android:editable="false"
+           android:hint="0"
+           android:padding="3dip" />
+   </TableRow>
+</TableLayout>
 
 </LinearLayout>
